@@ -59,16 +59,19 @@ function minus_prompt(e)
 
 function customMinus()
 {
+    // const x = 5;
     const x = localStorage.getItem('cachedDice');
     mprompt.style.display = "none"
     let today = Math.floor((Date.now() + ((hour)* 4)) / day);// today duh
-    if (x == 6 || today - 1709 >= 30)
+    console.log(x +  "today" + today - 19709)
+    if (x == 6 || today - 19709 >= 30)
     {
         prize.style.display = "block"
         return;
 
     }
     alert(x)
+    return;
 }
 
 function CalcMinus()
