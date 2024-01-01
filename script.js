@@ -64,7 +64,8 @@ function customMinus()
     mprompt.style.display = "none"
     let today = Math.floor((Date.now() + ((hour)* 4)) / day);// today duh
     console.log(x +  "today" + today - 19709)
-    if (x == 6 || today - 19709 >= 30)
+
+    if (x == 6 || today - 19709 >= 30 || x!= 6)
     {
         prize.style.display = "block"
         return;
@@ -80,20 +81,25 @@ function CalcMinus()
     
     let n = parseInt(score.innerHTML);
     let c = minusprompt.value;
+    const Tpoints = 76;
+    // const Tpoints = localStorage.getItem('cachedTpoints');
     
     if (n < c)
     {
+        alert("Invalid value")
         return;
     }
-    else 
+    else if (((Tpoints / 4) * 3)  <= n - c)
     {
-        n -= c
+        alert("To much energy")
+        n -= c;
     }
 
     score.innerHTML = n
     prize.style.display = "none"
 
     saveToCache(n);
+
 
     return;
 }
@@ -265,8 +271,13 @@ function dateChange(today)
     localStorage.setItem('cachedValue', temp)
 
     localStorage.setItem('cachedDate', today);
-
+    
     const dice = Math.floor(Math.random() * 6) + 1; 
+
+    if (dice == 6)
+    {
+        localStorage.setItem('cachedTpoints', temp)
+    }
 
     localStorage.setItem('cachedDice', dice);
     colorRandomize();
@@ -336,4 +347,3 @@ function colorRandomize()
 
 
 }
-
