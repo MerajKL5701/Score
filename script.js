@@ -201,7 +201,7 @@ function getFromCache()
         return x;
     }
     localStorage.setItem('cachedValue', 1844)
-    return 1844;
+    return 0;
 }
 
 function dateCheck(today)
