@@ -200,7 +200,7 @@ function getFromCache()
     {
         return x;
     }
-    localStorage.setItem('cachedValue', 1844)
+    localStorage.setItem('cachedValue', 0)
     return 0;
 }
 
