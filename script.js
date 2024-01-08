@@ -65,7 +65,7 @@ function customMinus()
     let today = Math.floor((Date.now() + ((hour)* 4)) / day);// today duh
     console.log(x +  "today" + today - 19709)
 
-    if (x == 6 || today - 19709 >= 30 || x!= 6)
+    if (x == 6 || today - 19709 >= 30 )
     {
         prize.style.display = "block"
         return;
@@ -81,8 +81,8 @@ function CalcMinus()
     
     let n = parseInt(score.innerHTML);
     let c = minusprompt.value;
-    const Tpoints = 76;
-    // const Tpoints = localStorage.getItem('cachedTpoints');
+
+     const Tpoints = localStorage.getItem('cachedTpoints');
     
     if (n < c)
     {
@@ -200,8 +200,8 @@ function getFromCache()
     {
         return x;
     }
-    localStorage.setItem('cachedValue', 1844)
-    return 1844;
+    localStorage.setItem('cachedValue', 0)
+    return 0;
 }
 
 function dateCheck(today)
