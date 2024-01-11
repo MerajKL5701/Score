@@ -24,7 +24,7 @@ let random;
     onNegative()
 
     let today = Math.floor((Date.now() + ((hour)* 4)) / day);// today duh
-    date.innerHTML = today - 19709 ;
+    date.innerHTML = today - 19733 ;
     
     // let today = prompt("today?")
     
@@ -63,9 +63,9 @@ function customMinus()
     const x = localStorage.getItem('cachedDice');
     mprompt.style.display = "none"
     let today = Math.floor((Date.now() + ((hour)* 4)) / day);// today duh
-    console.log(x +  "today" + today - 19709)
+    console.log(x +  "today" + today - 19733)
 
-    if (x == 6 || today - 19709 >= 30 )
+    if (x == 6 || today - 19733 >= 30 )
     {
         prize.style.display = "block"
         return;
