@@ -7,10 +7,12 @@ const clicker = document.getElementsByClassName("clicker")
 const nClicker = document.getElementsByClassName("nClicker")
 const points = document.getElementsByClassName("points")
 const npoints = document.getElementsByClassName("npoints")
+const e = document.getElementsByClassName("E")[0]
 const hour =  60 * 60 * 1000 //no of miliseconds in a hour
 const day = 24 * hour//no of miliseconds in a day
 const date = document.getElementsByClassName("date")[0];
 const nColor = 14;
+
 let random;
 
 
@@ -19,12 +21,14 @@ let random;
     pprompt.style.display = "none"
     mprompt.style.display = "none"
     
+    e.innerHTML = localStorage.getItem('ed');
+    
     // alert("? k ")
     onclickers()
     onNegative()
 
     let today = Math.floor((Date.now() + ((hour)* 4)) / day);// today duh
-    date.innerHTML = today - 19733 ;
+    date.innerHTML = today - 19756 ;
     
     // let today = prompt("today?")
     
@@ -344,6 +348,22 @@ function colorRandomize()
     
     localStorage.setItem('cachedColor', random);
     location.reload(); //reloads the doc
+
+
+}
+
+function edgeLord()
+{
+    let x = parseInt(localStorage.getItem('ed'))
+    if (x === NaN || x === null)
+    {
+        x = 100
+    }
+    console.log("done" + x)
+
+    x = x + 100
+    localStorage.setItem('ed',x);
+    // location.reload();
 
 
 }

@@ -63,15 +63,18 @@ html, body
     height: 100vh;
     width: 100vw;
     z-index: 0;
-    opacity: 50%;
+    opacity: 30%;
 }
 .today
-{
+{   
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
     background-color: hsla(var(--color), 80%);
     color: hsl(var(--textureColor));
     position: absolute;
     bottom: 10px;
     width:100%;
+    font-size: 40px;
     border: hsl(var(--accentColor))  solid;
     border-width: 2px 0px;
 }
