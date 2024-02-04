@@ -355,15 +355,14 @@ function colorRandomize()
 function edgeLord()
 {
     let x = parseInt(localStorage.getItem('ed'))
-    if (x === NaN || x === null)
+    console.log("done" + x)
+    if (isNaN(x))
     {
+        prompt("dfa")
         x = 100
     }
-    console.log("done" + x)
-
     x = x + 100
     localStorage.setItem('ed',x);
-    // location.reload();
-
+    location.reload();
 
 }
