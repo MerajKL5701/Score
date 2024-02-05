@@ -270,11 +270,14 @@ function dateChange(today)
 {
     
     const temp = localStorage.getItem('cachedValue')
+    const ed = localStorage.getItem('ed')
     localStorage.clear();
 
     localStorage.setItem('cachedValue', temp)
 
     localStorage.setItem('cachedDate', today);
+
+    localStorage.setItem('ed',ed);
     
     const dice = Math.floor(Math.random() * 6) + 1; 
 
