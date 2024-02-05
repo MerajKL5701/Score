@@ -28,7 +28,7 @@ let random;
     onNegative()
 
     let today = Math.floor((Date.now() + ((hour)* 4)) / day);// today duh
-    date.innerHTML = today - 19756 ;
+    date.innerHTML = today - 19759 ;
     
     // let today = prompt("today?")
     
@@ -67,9 +67,9 @@ function customMinus()
     const x = localStorage.getItem('cachedDice');
     mprompt.style.display = "none"
     let today = Math.floor((Date.now() + ((hour)* 4)) / day);// today duh
-    console.log(x +  "today" + today - 19733)
+    console.log(x +  "today" + today - 19759)
 
-    if (x == 6 || today - 19733 >= 30 )
+    if (x == 6 || today - 19759 >= 90 || parseInt(e.innerHTML) >= 1000 )
     {
         prize.style.display = "block"
         return;
@@ -359,9 +359,9 @@ function edgeLord()
     if (isNaN(x))
     {
         prompt("dfa")
-        x = 100
+        x = 0
     }
-    x = x + 100
+    x++
     localStorage.setItem('ed',x);
     location.reload();
 
