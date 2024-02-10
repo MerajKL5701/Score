@@ -16,17 +16,37 @@ function main()
     
     const n = Math.floor(Math.random() * arr.length)
     const button = document.getElementsByClassName("button")[0]
-    button.style.display = "none"
+
+    const timer = 15
+
+    repeater(repeatAction, timer)
     setTimeout(() => 
     {
         const caption = document.getElementsByClassName("head")[0];
         caption.innerHTML = arr[n]
-        button.style.display = "press me"
+        button.innerHTML = "press me"
         
-    }, 5 * 1000);
+    }, (timer + 1) * 1000);
     // define array 
     // changetext 
 }
 
+function repeater(x, timer)
+{
+    let counter = 0;
+const intervalId = setInterval(() => {
+    x(counter + 1);
+    counter++;
+    if (counter === timer ) {
+        clearInterval(intervalId);
+    }
+}, 1000);
+}
 
+function repeatAction(x) {
+    console.log("Action performed!");
+    const button = document.getElementsByClassName("button")[0]
+    button.innerHTML = x
+}
 
+// Repeat action every second for 5 seconds
