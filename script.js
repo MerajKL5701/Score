@@ -21,7 +21,7 @@ function main()
     {
         const caption = document.getElementsByClassName("head")[0];
         caption.innerHTML = arr[n]
-        button.style.display = "block"
+        button.style.display = "press me"
         
     }, 5 * 1000);
     // define array 
