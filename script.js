@@ -50,3 +50,13 @@ function repeatAction(x) {
 }
 
 // Repeat action every second for 5 seconds
+alotofk();
+function alotofk()
+{
+    let k = "k";
+    for (i = 0; i < 1000; i++)
+    {
+        k = k.concat("k")
+    }
+    console.log(k)
+}
